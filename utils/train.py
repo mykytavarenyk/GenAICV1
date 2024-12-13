@@ -23,7 +23,7 @@ def train_model(model, train_loader, val_loader, optimizer, num_epochs, device, 
     for epoch in range(num_epochs):
         model.train()
 
-        # Perform model-specific updates if provided
+
         if model_update_fn is not None:
             model_update_fn(model, epoch)
 

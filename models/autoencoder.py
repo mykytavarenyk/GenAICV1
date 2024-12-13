@@ -36,6 +36,5 @@ class Autoencoder(nn.Module):
         if outputs is not None:
             return outputs
         else:
-            # For a standard autoencoder, we cannot generate images from random noise
             raise NotImplementedError("Image generation from random noise is not implemented for standard Autoencoder.")
 
