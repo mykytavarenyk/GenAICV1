@@ -49,7 +49,7 @@ of steps to reach the data distribution.
 Latent Rectified Flow combines a VAE with Rectified Flow in a compressed latent space for more efficient generation. This two-stage approach first 
 encodes images into a 128-dimensional latent representation using a CNN with attention mechanisms, then applies Rectified Flow in this reduced space 
 using an MLP with residual blocks. 
-
+![img_6.png](img_6.png)
 ## DeepCache
 The implementation uses PyTorch's forward hook mechanism to intercept and modify layer outputs during inference. 
 At designated caching steps, DeepCache stores the output features of residual blocks; during subsequent steps, it performs linear interpolation between cached features and current computations. 
