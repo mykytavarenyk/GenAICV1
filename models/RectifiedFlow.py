@@ -173,10 +173,6 @@ class Encoder(nn.Module):
         z = mu + eps * std
         return z, mu, log_var
 
-
-# -----------------------------
-# Decoder for Latent-Based Diffusion Model
-# -----------------------------
 class Decoder(nn.Module):
     def __init__(self, latent_dim=128, out_channels=1, img_size=28):
         super(Decoder, self).__init__()
@@ -230,10 +226,6 @@ class Decoder(nn.Module):
             x = F.interpolate(x, size=(self.img_size, self.img_size), mode='bilinear', align_corners=False)
         return x
 
-
-# -----------------------------
-# Latent Diffusion MLP
-# -----------------------------
 class LatentMLP(nn.Module):
     def __init__(self, latent_dim=128, hidden_dim=512):
         super(LatentMLP, self).__init__()

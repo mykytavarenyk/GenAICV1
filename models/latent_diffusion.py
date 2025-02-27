@@ -141,7 +141,6 @@ class LatentUNet(nn.Module):
             nn.Linear(hidden_dim, hidden_dim)
         )
 
-        # Main network (since latent space is flat, we use MLPs instead of convolutions)
         self.net = nn.ModuleList([
             LatentBlock(latent_dim, hidden_dim, hidden_dim),
             LatentBlock(hidden_dim, hidden_dim, hidden_dim),
@@ -161,9 +160,6 @@ class LatentUNet(nn.Module):
         return h
 
 
-# -----------------------------
-# Latent Diffusion Model
-# -----------------------------
 class LatentDiffusion(pl.LightningModule):
     def __init__(self, vae, timesteps=1000, beta_start=1e-4, beta_end=0.02, lr=1e-4):
         super().__init__()

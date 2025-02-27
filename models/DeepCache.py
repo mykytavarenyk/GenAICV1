@@ -385,9 +385,6 @@ def run_deepcache_experiments(diffusion_model, real_images, num_samples=16, ddim
     return results
 
 
-# -----------------------------
-# Visualization Functions
-# -----------------------------
 def make_grid(tensor, nrow=8):
     """Simple function to create a grid of images."""
     b, c, h, w = tensor.shape

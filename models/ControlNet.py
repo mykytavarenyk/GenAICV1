@@ -12,7 +12,6 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import cv2
 
-# Set random seed for reproducibility
 pl.seed_everything(42)
 
 BATCH_SIZE = 64

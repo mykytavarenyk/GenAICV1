@@ -40,9 +40,6 @@ class UncondBlock(nn.Module):
         h = self.conv2(h)
         return self.relu(h + self.shortcut(x))
 
-# -----------------------------
-# Downsample and Upsample Blocks
-# -----------------------------
 class DownSample(nn.Module):
     def __init__(self, in_channels, out_channels):
         super().__init__()
